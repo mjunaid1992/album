@@ -28,16 +28,16 @@ export const LoaderProvider = ({ children }) => {
             <View
               style={ {
                 borderRadius: 15,
-                backgroundColor: '#fff',
+                backgroundColor: colors.PRIMARY.default,
                 padding: 25,
               } }
             >
-              <ActivityIndicator size="large" color={ colors.PINK.default } />
+              <ActivityIndicator size="large" color={ colors.ORANGE.default } />
               <Text
                 style={ {
                   fontSize: 14,
                   fontWeight: '200',
-                  color: '#030031',
+                  color: colors.SECONDARY.text,
                   opacity: 1,
                 } }
               >

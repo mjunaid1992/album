@@ -7,12 +7,13 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import imagesReducer from './imagesSlice/imagesSlice';
 
 const reducers = combineReducers({
-    images: imagesReducer
+    album: imagesReducer
 });
 
 const persistConfig = {
     key: 'root',
     storage: AsyncStorage,
+    blacklist: ['album'],
 };
 
 const persistedReducer = persistReducer(persistConfig, reducers);

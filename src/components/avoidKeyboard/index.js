@@ -1,6 +1,6 @@
 import React from 'react';
 import { KeyboardAvoidingView, ScrollView, View } from 'react-native';
-import { isIPHONE } from '../../constants';
+import { hp, isIPHONE } from '../../constants';
 
 export const AvoidKeyboard = ({ children }) => {
   return (
@@ -8,10 +8,10 @@ export const AvoidKeyboard = ({ children }) => {
       { ...(isIPHONE ? { behavior: 'padding' } : {}) }
     >
       <ScrollView
+        contentContainerStyle={ { flexGrow: 1, minHeight: hp(100) } }
         showsVerticalScrollIndicator={ false }
         keyboardShouldPersistTaps="handled">
         { children }
-        <View style={ { marginBottom: 25 } } />
       </ScrollView>
     </KeyboardAvoidingView>
   );
