@@ -8,7 +8,6 @@ import { navigationRef } from "./navigationRef";
 const Stack = createStackNavigator();
 const navOptionHandler = () => ({
     headerShown: false,
-    animationEnabled: false,
 });
 
 

@@ -39,7 +39,6 @@ const App_Constants = {
 
 const navigationOptions = () => ({
   headerShown: false,
-  animationEnabled: false,
   drawerPosition: 'right',
 });
 
