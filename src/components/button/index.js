@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
+import { Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import styles from './styles';
 import { colors } from '../../constants';
 
@@ -12,7 +12,6 @@ export const Button = props => {
       disabled={ disabled }
       style={ [
         styles.container,
-        disabled && { backgroundColor: colors.PINK.disabled },
         buttonStyle,
       ] }>
       { loading ? (

@@ -2,6 +2,8 @@ export default {
     PRIMARY: {
         default: '#FFFFFF',
         light: '#D8D8D8',
+        dark: '#f7f7f8',
+        backgroundOpacity: 'rgba(0, 0, 0, 0.50)',
     },
     SECONDARY: {
         default: '#000000',
@@ -11,6 +13,9 @@ export default {
     },
     TRANSPARENT: {
         default: 'transparent',
+    },
+    ORANGE: {
+        default: '#fe734d',
     },
     WHITE: {
         default: '#FFFFFF',

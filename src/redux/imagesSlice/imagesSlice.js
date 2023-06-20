@@ -5,12 +5,13 @@ import {
 import axios from 'axios';
 
 import { Alert } from 'react-native';
+import { App_Constants } from '../../constants';
 
 export const getAllImages = createAsyncThunk(
-    'movies/getAll',
-    async (movieType) => {
+    'images/getAll',
+    async (page) => {
         try {
-            let url = `https://onlinemovies007.com/api/${movieType ? movieType : 'home'}`;
+            let url = `${App_Constants.BASE_URL}?page=${page}&client_id=${App_Constants.ACCESS_KEY}`;
             const res = await axios.get(url);
             return res.data;
         } catch(err) {
@@ -22,11 +23,12 @@ export const getAllImages = createAsyncThunk(
 
 
 const imagesSlice = createSlice({
-    name: 'movies',
+    name: 'images',
     initialState: {
         allImages: [],
         loading: false,
         error: '',
+        currentPage: 0,
     },
     reducers: {
         reset: (state, action) => {
@@ -35,6 +37,8 @@ const imagesSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder.addCase(getAllImages.pending, (state, action) => {
+            console.log("🚀 ~ file: imagesSlice.js:40 ~ builder.addCase ~ action:", action);
+            console.log("🚀 ~ file: imagesSlice.js:40 ~ builder.addCase ~ state:", state);
             state.loading = true;
         });
         builder.addCase(getAllImages.fulfilled, (state, action) => {

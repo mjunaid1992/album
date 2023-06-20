@@ -3,11 +3,10 @@ import { colors, wp, hp, isIPHONEX, isPAD, fontWeight, wpt } from '../../constan
 
 const styles = StyleSheet.create({
   container: {
-    //width: isPAD ? wp(65) : wp(95),
     width: wpt(95),
-    borderRadius: wp(10),
+    borderRadius: wp(3),
     height: isPAD ? hp(5.25) : isIPHONEX ? hp(6) : hp(6.25),
-    backgroundColor: colors.PINK.default,
+    backgroundColor: colors.ORANGE.default,
     alignSelf: 'center',
     marginVertical: hp(4),
     alignItems: 'center',

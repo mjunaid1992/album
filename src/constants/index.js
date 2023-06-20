@@ -33,7 +33,8 @@ const ICON_CONSTANTS = {
   Foundation: Foundation,
 };
 const App_Constants = {
-  BASE_URL: ''
+  BASE_URL: 'https://api.unsplash.com/',
+  ACCESS_KEY: '4TiVY_erdKsRx-AAt-ZJ-JzgpQTQmCUnXLZpDYS_gH0',
 };
 
 const navigationOptions = () => ({
